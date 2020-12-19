@@ -1,13 +1,29 @@
 <template>
-  
+  <Autocomplete />
 </template>
 
 <script>
-// @ is an alias to /src
+import Autocomplete from '@/components/Autocomplete'
 
 export default {
-  name: 'Home',
+  data() {
+    return {
+      
+    }
+  },
+  methods: {
+    filterStates() {
+      this.filteredStates = this.states.filter(state => {
+        return state.toLowerCase().startsWith(this.state.toLowerCase())
+      })
+    }
+  },
   components: {
+    Autocomplete
   }
 }
 </script>
+
+<style lang="stylus" scoped>
+
+</style>
