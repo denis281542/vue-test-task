@@ -301,6 +301,7 @@ export default {
 
 .width-autocomplete {
   position: absolute;
+  width: 523px;
 
 }
 
